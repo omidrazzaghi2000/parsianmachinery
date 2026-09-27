@@ -99,7 +99,7 @@ With this approach, edits you make in the panel are **first saved only in your o
 
 1. In the admin panel, click the orange **"⬇ Download data.json (Publish)"** button.
 2. A file named `data.json` downloads.
-3. **Replace** the old `data.json` on your web host with this new file (via FTP or your host's control panel / file manager).
+3. **Replace** the old `data.json` on your web host with this new file (on GitHub Pages: upload it to the repository — see section 6; on other hosts: via FTP or the control panel / file manager).
 4. Done — the live site updates for all visitors.
 
 In practice, the site manager only needs to know how to upload one file to the host. If even that feels like too much, we can later upgrade to "Option B" (Strapi), where publishing is fully automatic with no file uploads.
@@ -107,6 +107,22 @@ In practice, the site manager only needs to know how to upload one file to the h
 ---
 
 ## 6. Putting the site online (hosting)
+
+### GitHub Pages (current setup)
+
+The site is published from the `main` branch of https://github.com/omidrazzaghi2000/parsianmachinery.
+
+**One-time setup:** on GitHub open the repository → **Settings → Pages** → under *Build and deployment* choose **Source: Deploy from a branch**, **Branch: `main`**, folder **`/ (root)`** → **Save**. After a minute or two the site is live at:
+
+https://omidrazzaghi2000.github.io/parsianmachinery/
+
+**Publishing content changes:** after clicking "⬇ Download data.json (Publish)" in the admin panel, open the repository on GitHub → **Add file → Upload files** → drop in the new `data.json` → **Commit changes**. GitHub redeploys automatically. Visitors may still see the old content for up to about 10 minutes, because GitHub caches files.
+
+Keep in mind:
+- File names are case-sensitive on GitHub: `photo.JPG` and `photo.jpg` are different files. Use lowercase names and reference them exactly as written.
+- The empty `.nojekyll` file tells GitHub to serve the files as they are — don't delete it.
+
+### Other hosts
 
 Upload the entire `website` folder to your web host (e.g. ParsPack, ArvanCloud, or any provider). `index.html` becomes your home page. Make sure `data.json` and the `assets` folder are uploaded too, keeping the same folder structure.
 
