@@ -38,11 +38,15 @@ window.renderPage = function () {
             <h1 class="hero-wordmark">
               <span class="hero-line hero-line-1 bt" dir="${dirOf(w1)}" style="--bt-step:90ms">${blurText(w1,'letters')}</span>
               <a class="hero-machine" href="${escAttr(machines[0].url || 'products.html')}" aria-label="${escAttr(machineAlt(machines[0], fa))}">
-                ${machines.map((m, i) => `
+                ${machines.map((m, i) => {
+                  // WebP first; the PNG is only fetched if a (very old) browser can't show it.
+                  // No <picture>/<source>: Firefox re-picks the PNG for detached copies after a re-render.
+                  const fb = m.imageWebp && m.image ? ` data-fb="${escAttr(m.image)}" onerror="if(this.dataset.fb){this.onerror=null;this.src=this.dataset.fb}"` : '';
+                  return `
                 <picture class="hero-slide${i === 0 ? ' is-active' : ''}">
-                  ${m.imageWebp ? `<source srcset="${escAttr(m.imageWebp)}" type="image/webp">` : ''}
-                  <img src="${escAttr(m.image)}" alt="" decoding="async" fetchpriority="${i === 0 ? 'high' : 'low'}">
-                </picture>`).join('')}
+                  <img ${i ? 'data-' : ''}src="${escAttr(m.imageWebp || m.image)}"${fb} alt="" decoding="async"${i ? '' : ' fetchpriority="high"'}>
+                </picture>`;
+                }).join('')}
               </a>
               <span class="hero-line hero-line-2 bt" dir="${dirOf(w2)}" style="--bt-step:90ms">${blurText(w2,'letters')}</span>
             </h1>
@@ -86,7 +90,7 @@ window.renderPage = function () {
             <p>${fa?h.highlight.descFa:h.highlight.descEn}</p>
             <div><a class="btn-link" href="${h.highlight.ctaUrl}">${fa?h.highlight.ctaFa:h.highlight.ctaEn} ${A}</a></div>
           </div>
-          <div class="visual">${h.highlight.image ? `<img src="${h.highlight.image}" alt="" style="width:90%;height:auto;border-radius:14px">` : twoPlatenSVG()}</div>
+          <div class="visual">${h.highlight.image ? `<img src="${h.highlight.image}" alt="" loading="lazy" decoding="async" style="width:90%;height:auto;border-radius:14px">` : twoPlatenSVG()}</div>
         </div></div>`;
     }
 
@@ -170,7 +174,7 @@ window.renderPage = function () {
         <div class="cust-marquee">
           <div class="cust-track">
             ${dbl.map(c=>`<div class="cust-logo" title="${c.name}">
-              <img src="${c.logo}" alt="${c.name}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'cust-logo-text',textContent:'${c.name.replace(/'/g,"\\'")}'}))">
+              <img src="${c.logo}" alt="${c.name}" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'cust-logo-text',textContent:'${c.name.replace(/'/g,"\\'")}'}))">
             </div>`).join('')}
           </div>
         </div>`;
@@ -327,7 +331,7 @@ window.renderPage = function () {
             </tr></thead>
             <tbody>
               ${(p.models||[]).map(md=>`<tr>
-                <td>${md.image?`<img src="${md.image}" alt="${md.code}" style="width:90px;height:auto;border-radius:6px">`:''}</td>
+                <td>${md.image?`<img src="${md.image}" alt="${md.code}" loading="lazy" decoding="async" style="width:90px;height:auto;border-radius:6px">`:''}</td>
                 <td class="code">${md.code}</td>
                 <td>${fa?md.tonFa:md.tonEn}</td>
                 <td>${fa?md.shotFa:md.shotEn}</td>
@@ -352,7 +356,7 @@ window.renderPage = function () {
             ${items.map(a => `
               <a class="aux-tile" href="aux-product.html?id=${a.id}">
                 <div class="aux-tile-img" style="background:${a.imageBg||'#0a1f3a'}">
-                  ${a.image ? `<img src="${a.image}" alt="${fa?a.nameFa:a.nameEn}">` : '<span class="aux-tile-ph">📦</span>'}
+                  ${a.image ? `<img src="${a.image}" alt="${fa?a.nameFa:a.nameEn}" loading="lazy" decoding="async">` : '<span class="aux-tile-ph">📦</span>'}
                   ${a.brand ? `<span class="aux-tile-brand">${a.brand}</span>` : ''}
                 </div>
                 <div class="aux-tile-body">
@@ -522,7 +526,7 @@ window.renderPage = function () {
           <div class="news-grid">
             ${items.map(n=>`
               <a class="news-card" href="news-article.html?id=${n.id}">
-                <div class="thumb">${n.image ? `<img src="${n.image}" alt="" style="width:100%;height:100%;object-fit:cover">` : newsThumbSVG(n.category)}</div>
+                <div class="thumb">${n.image ? `<img src="${n.image}" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover">` : newsThumbSVG(n.category)}</div>
                 <div class="body">
                   <div class="nmeta">
                     <span>${fa?n.dateFa:formatDate(n.date)}</span>
@@ -688,7 +692,18 @@ function startHeroRotator(link, machines, fa, holdMs){
   if (slides.length < 2) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  var current = 0, timer = null, hovered = false, focused = false;
+  var current = 0, timer = null, preload = null, hovered = false, focused = false;
+  // only the first machine is downloaded with the page; each next one is
+  // fetched shortly before its turn, and the rotation waits if it's late
+  function load(slide){
+    var img = slide.querySelector('img[data-src]');
+    if (img) { img.src = img.getAttribute('data-src'); img.removeAttribute('data-src'); }
+  }
+  function state(slide){
+    var img = slide.querySelector('img');
+    if (!img || img.hasAttribute('data-src') || !img.complete) return 'wait';
+    return img.naturalWidth > 0 ? 'ok' : 'broken';
+  }
   function show(next){
     var out = slides[current];
     out.classList.remove('is-active');
@@ -699,10 +714,22 @@ function startHeroRotator(link, machines, fa, holdMs){
     link.href = machines[next].url || 'products.html';
     link.setAttribute('aria-label', machineAlt(machines[next], fa));
   }
-  function schedule(){
-    clearTimeout(timer);
+  function advance(){
     if (hovered || focused || document.hidden) return;
-    timer = setTimeout(function () { show((current + 1) % slides.length); schedule(); }, holdMs);
+    for (var step = 1; step < slides.length; step++) {
+      var n = (current + step) % slides.length, st = state(slides[n]);
+      if (st === 'ok') { show(n); schedule(); return; }
+      if (st === 'wait') { load(slides[n]); timer = setTimeout(advance, 400); return; }
+      // 'broken' (missing file): skip it
+    }
+    schedule();
+  }
+  function schedule(){
+    clearTimeout(timer); clearTimeout(preload);
+    if (hovered || focused || document.hidden) return;
+    var upcoming = slides[(current + 1) % slides.length];
+    preload = setTimeout(function () { load(upcoming); }, Math.max(0, holdMs - 1500));
+    timer = setTimeout(advance, holdMs);
   }
   function onVisibility(){ schedule(); }
   link.addEventListener('mouseenter', function () { hovered = true;  schedule(); });
@@ -712,7 +739,7 @@ function startHeroRotator(link, machines, fa, holdMs){
   document.addEventListener('visibilitychange', onVisibility);
   schedule();
   heroRotatorStop = function () {
-    clearTimeout(timer);
+    clearTimeout(timer); clearTimeout(preload);
     document.removeEventListener('visibilitychange', onVisibility);
   };
 }
