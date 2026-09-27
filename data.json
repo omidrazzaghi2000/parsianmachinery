@@ -1,0 +1,975 @@
+{
+  "_meta": {
+    "version": "1.1.0",
+    "lastUpdated": "2026-05-29",
+    "defaultLang": "fa"
+  },
+  "site": {
+    "name": {
+      "fa": "پارسیان",
+      "en": "Parsian"
+    },
+    "tagline": {
+      "fa": "ماشین‌های فرآیند پلاستیک",
+      "en": "Plastic Processing Machines MFG."
+    },
+    "slogan": {
+      "fa": "ما از جایی شروع می‌کنیم که دیگران پایان داده‌اند",
+      "en": "We Begin, Where Others End"
+    },
+    "logo": "logo2.png",
+    "contact": {
+      "phone": "+982176212748",
+      "phoneDisplay": {
+        "fa": "۰۲۱-۷۶۲۱۲۷۴۸-۹ · ۰۲۱-۷۶۲۱۳۹۲۹",
+        "en": "+98 21 7621 2748-9 · +98 21 7621 3929"
+      },
+      "fax": "+982176212708",
+      "faxDisplay": {
+        "fa": "۰۲۱-۷۶۲۱۲۷۰۸",
+        "en": "+98 21 7621 2708"
+      },
+      "whatsapp": "+989121234567",
+      "email": "info@parsian-ppm.com",
+      "website": "www.parsian-ppm.com",
+      "address": {
+        "fa": "تهران، جاده آبعلی، شهرک صنعتی خرمدشت، خیابان دوم شرقی، پلاک ۲۵۰",
+        "en": "No. 250 East Second St., Khorramdasht Industrial Zone, Abali Road, Tehran, Iran"
+      },
+      "hours": {
+        "fa": "شنبه تا چهارشنبه: ۸ تا ۱۷ — پشتیبانی فنی ۲۴ ساعته",
+        "en": "Saturday–Wednesday: 8 AM – 5 PM — 24/7 Technical Support"
+      },
+      "social": {
+        "linkedin": "#",
+        "instagram": "#",
+        "telegram": "#",
+        "whatsapp": "#",
+        "youtube": "#"
+      }
+    },
+    "stats": [
+      {
+        "value": "30+",
+        "labelFa": "سال تجربه",
+        "labelEn": "Years experience"
+      },
+      {
+        "value": "5+",
+        "labelFa": "کشور صادرات",
+        "labelEn": "Export countries"
+      },
+      {
+        "value": "7K+",
+        "labelFa": "مشتری فعال",
+        "labelEn": "Active customers"
+      }
+    ]
+  },
+  "navigation": [
+    { "id": "home", "labelFa": "خانه", "labelEn": "Home", "url": "index.html" },
+    {
+      "id": "about", "labelFa": "درباره ما", "labelEn": "About", "url": "about.html",
+      "children": [
+        { "items": [
+          { "labelFa": "درباره شرکت", "labelEn": "Company",         "url": "about.html",                "descFa": "بنیان‌گذاری در ۱۳۸۱، با مهندسی ایرانی", "descEn": "Founded 2002, built on Iranian engineering" },
+          { "labelFa": "تاریخچه",      "labelEn": "Our Journey",      "url": "about.html#timeline",       "descFa": "از ۲۰۰۲ تا امروز",                       "descEn": "From 2002 to today" },
+          { "labelFa": "تیم رهبری",    "labelEn": "Leadership",       "url": "about.html#team",           "descFa": "برادران شاکری و تیم",                    "descEn": "The Shakeri brothers and team" },
+          { "labelFa": "گواهینامه‌ها",  "labelEn": "Certifications",   "url": "about.html#certifications", "descFa": "ISO 9001 و دانش‌بنیان",                  "descEn": "ISO 9001 and Knowledge-Based" }
+        ]}
+      ]
+    },
+    {
+      "id": "products", "labelFa": "محصولات", "labelEn": "Products", "url": "products.html",
+      "children": [
+        {
+          "headingFa": "ماشین تزریق پلاستیک", "headingEn": "Injection Molding Machines", "headingUrl": "machines.html",
+          "items": [
+            { "labelFa": "سری استاندارد",       "labelEn": "Standard Series", "url": "product.html?id=standard",   "descFa": "۱۰۰ تا ۱۳۰۰ تن، سروموتور",       "descEn": "100–1300 ton, servo drive" },
+            { "labelFa": "سری دو صفحه‌ای",      "labelEn": "Two-Platen",       "url": "product.html?id=two-platen", "descFa": "تنها در ایران — قطعات بزرگ",   "descEn": "Only in Iran — large parts" },
+            { "labelFa": "سری سرعت بالا",       "labelEn": "High-Speed",       "url": "product.html?id=high-speed", "descFa": "تا ۲۵۰ mm/s، ظروف IML",         "descEn": "Up to 250 mm/s, IML containers" },
+            { "labelFa": "سری UPVC",             "labelEn": "UPVC",             "url": "product.html?id=upvc",       "descFa": "اتصالات UPVC، مقاوم به سایش",   "descEn": "UPVC fittings, wear-resistant" },
+            { "labelFa": "سری PET — پریفرم",    "labelEn": "PET — Preform",    "url": "product.html?id=pet",        "descFa": "پریفرم با کیفیت بالا",          "descEn": "High-quality preforms" },
+            { "labelFa": "مشاهده همه دستگاه‌ها", "labelEn": "View all machines","url": "products.html",              "isAll": true }
+          ]
+        },
+        {
+          "headingFa": "محصولات جانبی", "headingEn": "Auxiliary Products", "headingUrl": "auxiliary.html",
+          "items": [
+            { "labelFa": "سیستم سرو موتور",     "labelEn": "Servo Motor Systems",  "url": "aux-product.html?id=servo-motors",     "descFa": "کاهش مصرف برق تا ۸۰٪",       "descEn": "Up to 80% energy savings" },
+            { "labelFa": "درایور سرو",          "labelEn": "Servo Drivers",         "url": "aux-product.html?id=servo-drivers",    "descFa": "کنترل دقیق حرکت",            "descEn": "Precise motion control" },
+            { "labelFa": "شارژر الکترواستاتیک KIAN", "labelEn": "Electrostatic Charger (KIAN)", "url": "aux-product.html?id=esd-charger",      "descFa": "تا ۲۰ کیلوولت، مخصوص IML",      "descEn": "Up to 20 kV, IML-ready" },
+            { "labelFa": "سنسور خطی KIAN",     "labelEn": "Linear Sensors (KIAN)", "url": "aux-product.html?id=linear-sensors",   "descFa": "۱۰ طول، دقت ۰.۰۱ میلی‌متر",     "descEn": "10 lengths, 0.01 mm repeatability" },
+            { "labelFa": "شیر هیدرولیک",        "labelEn": "Hydraulic Valves",      "url": "aux-product.html?id=hydraulic-valves", "descFa": "اجزای کنترل سیال",            "descEn": "Fluid-control components" },
+            { "labelFa": "مشاهده همه قطعات",    "labelEn": "View all accessories",  "url": "auxiliary.html",                  "isAll": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services", "labelFa": "خدمات", "labelEn": "Services", "url": "services.html",
+      "children": [
+        { "headingFa": "خدمات پارسیان", "headingEn": "Parsian Services", "headingUrl": "services.html", "items": [
+          { "labelFa": "نصب و راه‌اندازی",   "labelEn": "Installation & Setup",  "url": "service.html?id=installation", "descFa": "کارشناسان ما در محل شما",   "descEn": "Our specialists on your floor" },
+          { "labelFa": "سرویس و نگهداری",    "labelEn": "Service & Maintenance", "url": "service.html?id=maintenance",  "descFa": "حداکثر زمان کارکرد",         "descEn": "Maximum uptime" },
+          { "labelFa": "آموزش اپراتور",      "labelEn": "Operator Training",     "url": "service.html?id=training",     "descFa": "از پایه تا پیشرفته",        "descEn": "Basic to advanced" },
+          { "labelFa": "ارتقا دستگاه قدیمی", "labelEn": "Retrofit & Upgrade",    "url": "service.html?id=upgrade",      "descFa": "ارتقا به سروموتور",         "descEn": "Servo + modern controls" },
+          { "labelFa": "قطعات یدکی اصل",     "labelEn": "Genuine Spare Parts",   "url": "service.html?id=parts",        "descFa": "ارسال سریع به سراسر کشور",  "descEn": "Fast nationwide dispatch" },
+          { "labelFa": "پشتیبانی ۲۴ ساعته",  "labelEn": "24/7 Support",          "url": "service.html?id=support",      "descFa": "تماس، ایمیل، خدمات در محل","descEn": "Phone, email, on-site" }
+        ]}
+      ]
+    },
+    {
+      "id": "news", "labelFa": "اخبار", "labelEn": "News", "url": "news.html",
+      "children": [
+        { "items": [
+          { "labelFa": "همه اخبار",      "labelEn": "All news",       "url": "news.html",                   "descFa": "تمام اخبار، رویدادها و فناوری", "descEn": "All news, events and tech" },
+          { "labelFa": "فناوری",         "labelEn": "Technology",     "url": "news.html?cat=technology",    "descFa": "نوآوری‌ها و معرفی محصولات",       "descEn": "Innovation and launches" },
+          { "labelFa": "رویدادها",       "labelEn": "Events",         "url": "news.html?cat=event",         "descFa": "نمایشگاه‌ها و کنفرانس‌ها",         "descEn": "Trade fairs and conferences" },
+          { "labelFa": "پایداری",        "labelEn": "Sustainability", "url": "news.html?cat=sustainability","descFa": "محیط‌زیست و انرژی",                "descEn": "Environment and energy" },
+          { "labelFa": "رسانه و مصاحبه", "labelEn": "Press",          "url": "news.html?cat=press",         "descFa": "مصاحبه‌های مدیران",                "descEn": "Leadership interviews" }
+        ]}
+      ]
+    },
+    { "id": "gallery", "labelFa": "گالری", "labelEn": "Gallery", "url": "gallery.html" },
+    { "id": "contact", "labelFa": "تماس",  "labelEn": "Contact", "url": "contact.html" }
+  ],
+  "home": {
+    "hero": {
+      "wordmark1Fa": "ماشین‌سازی",           
+      "wordmark1En": "MACHINERY",
+      "wordmark2Fa": "پارسیان",
+      "wordmark2En": "PARSIAN",
+      "machineSeconds": 4,
+      "machines": [
+        { "model": "PA-1300/12300", "image": "assets/img/hero/pa-1300.png", "imageWebp": "assets/img/hero/pa-1300.webp", "url": "product.html?id=two-platen" },
+        { "model": "PA-500/2800", "image": "assets/img/hero/pa-500.png", "imageWebp": "assets/img/hero/pa-500.webp", "url": "product.html?id=standard" },
+        { "model": "PA-800/5600", "image": "assets/img/hero/pa-800.png", "imageWebp": "assets/img/hero/pa-800.webp", "url": "product.html?id=two-platen" },
+        { "model": "PA-300/1100", "image": "assets/img/hero/pa-300.png", "imageWebp": "assets/img/hero/pa-300.webp", "url": "product.html?id=high-speed" },
+        { "model": "PA-200/620", "image": "assets/img/hero/pa-200.png", "imageWebp": "assets/img/hero/pa-200.webp", "url": "product.html?id=pet" },
+        { "model": "PA-100/250", "image": "assets/img/hero/pa-100.png", "imageWebp": "assets/img/hero/pa-100.webp", "url": "product.html?id=standard" }
+      ],
+      "eyebrowFa": "پیشگام صنعت تزریق پلاستیک ایران از ۱۳۸۱",
+      "eyebrowEn": "Iran's plastic-machinery pioneer since 2002",
+      "titleFa": "<span class='glow'>ما از جایی شروع می‌کنیم</span> که دیگران پایان داده‌اند",
+      "titleEn": "<span class='glow'>We Begin,</span> Where Others End",
+      "leadFa": "دستگاه‌های تزریق پلاستیک از ۱۰۰ تا ۱۳۰۰ تن، تنها سازنده دستگاه دو صفحه‌ای در ایران، با خدمات شبانه‌روزی و کاهش مصرف برق تا ۸۰٪.",
+      "leadEn": "Plastic injection molding machines from 100 to 1300 tons. Iran's only two-platen producer, with 24/7 service and up to 80% energy savings.",
+      "primaryCtaFa": "مشاهده محصولات",
+      "primaryCtaEn": "Discover machines",
+      "primaryCtaUrl": "products.html",
+      "secondaryCtaFa": "دریافت کاتالوگ ۲۰۲۶",
+      "secondaryCtaEn": "Download Catalog 2026",
+      "secondaryCtaUrl": "#"
+    },
+    "highlight": {
+      "kickerFa": "برجسته",
+      "kickerEn": "Highlight",
+      "titleFa": "دو صفحه‌ای ۱۳۰۰ تن — تنها در ایران، فقط در پارسیان",
+      "titleEn": "1300T Two-Platen — only in Iran, only at Parsian",
+      "descFa": "به‌روزترین تکنولوژی گیره دنیا، نیروی قفل قوی‌تر، اشغال فضای کمتر و راندمان تولید بالاتر — برای قطعات بزرگ و پیچیده.",
+      "descEn": "The world's most advanced clamping technology — stronger lock-up, smaller footprint, higher throughput — for long, complex parts.",
+      "ctaFa": "اطلاعات فنی این تکنولوژی",
+      "ctaEn": "Read the technology brief",
+      "ctaUrl": "product.html?id=two-platen",
+      "image": "130012300.jpg"
+    },
+    "industries": [
+      {
+        "id": "automotive",
+        "iconKey": "car",
+        "labelFa": "خودرو و قطعات",
+        "labelEn": "Automotive",
+        "descFa": "قطعات داخلی، خارجی و عملکردی",
+        "descEn": "Interior, exterior, functional parts",
+        "image": "industry-automotive.jpg"
+      },
+      {
+        "id": "packaging",
+        "iconKey": "box",
+        "labelFa": "بسته‌بندی",
+        "labelEn": "Packaging",
+        "descFa": "ظروف، درب، پریفرم",
+        "descEn": "Containers, caps, preforms",
+        "image": "industry-packaging.jpg"
+      },
+      {
+        "id": "medical",
+        "iconKey": "medical",
+        "labelFa": "پزشکی و دارو",
+        "labelEn": "Medical",
+        "descFa": "سرنگ، ست تزریق، ابزار",
+        "descEn": "Syringes, IV sets, tooling",
+        "image": "industry-medical.jpg"
+      },
+      {
+        "id": "electronics",
+        "iconKey": "bolt",
+        "labelFa": "برق و الکترونیک",
+        "labelEn": "Electronics",
+        "descFa": "کلیدها، کانکتور، محفظه",
+        "descEn": "Switches, connectors, housings",
+        "image": "industry-electronics.jpg"
+      },
+      {
+        "id": "construction",
+        "iconKey": "building",
+        "labelFa": "ساختمان و زیربنا",
+        "labelEn": "Construction",
+        "descFa": "اتصالات UPVC، لوله، دریچه",
+        "descEn": "UPVC fittings, pipes, valves",
+        "image": "industry-construction.jpg"
+      },
+      {
+        "id": "consumer",
+        "iconKey": "clock",
+        "labelFa": "لوازم خانگی",
+        "labelEn": "Consumer Goods",
+        "descFa": "ظروف، اسباب‌بازی، کالا",
+        "descEn": "Containers, toys, daily goods",
+        "image": "industry-consumer.jpg"
+      },
+      {
+        "id": "industrial",
+        "iconKey": "chart",
+        "labelFa": "صنعتی و تخصصی",
+        "labelEn": "Industrial",
+        "descFa": "قطعات تخصصی صنعتی",
+        "descEn": "Custom industrial parts",
+        "image": "industry-industrial.jpg"
+      },
+      {
+        "id": "optical",
+        "iconKey": "eye",
+        "labelFa": "اپتیک و نوری",
+        "labelEn": "Optical",
+        "descFa": "لنز، چراغ، اپتیک دقیق",
+        "descEn": "Lenses, lamps, precision optics",
+        "image": "industry-optical.jpg"
+      }
+    ]
+  },
+  "about": {
+    "heroTitleFa": "پیشگام در صنعت تزریق پلاستیک ایران",
+    "heroTitleEn": "Pioneering Iran's plastic machinery industry",
+    "heroSubtitleFa": "از ۱۳۸۱، با تکیه بر مهندسی ایرانی و کیفیت اروپایی",
+    "heroSubtitleEn": "Since 2002, built on Iranian engineering and European-grade quality",
+    "storyFa": "<p>شرکت سازنده ماشین‌های فرآیند پلاستیک پارسیان توسط آقایان محمدرضا شاکری و امیر شاکری در سال ۱۳۸۱ پایه‌گذاری و تأسیس شد. این شرکت فعالیت خود را با تکیه بر دانش و تجربه روز در زمینه ساخت دستگاه‌های تزریق پلاستیک آغاز کرد و امروز جزو بزرگ‌ترین سازندگان دستگاه‌های تزریق پلاستیک در ایران است.</p><p>دستگاه‌های تولیدی پارسیان در تنوع و مدل‌های مختلف از تناژ ۱۰۰ تن تا ۱۳۰۰ تن با واحدهای تزریق از ۱۲۰ گرم تا ۱۶۰۰۰ گرم را در بر می‌گیرد.</p><p>پارسیان امروز تنها سازنده دستگاه‌های تزریق پلاستیک با تکنولوژی دو صفحه‌ای در تناژهای ۵۰۰، ۸۰۰ و ۱۳۰۰ تن در ایران است.</p>",
+    "storyEn": "<p>Parsian Plastic Processing Machines MFG. was founded in 2002 by Mohammad Reza Shakeri and Amir Shakeri. Building on deep technical expertise in plastic injection molding, the company has grown to become one of Iran's largest manufacturers.</p><p>Our product range spans from 100 to 1300 tons of clamping force, with injection units from 120g to 16,000g shot weight.</p><p>Parsian is today Iran's only manufacturer of two-platen injection molding machines in the 500, 800 and 1300-ton range.</p>",
+    "timeline": [
+      {
+        "year": "1381 / 2002",
+        "titleFa": "تأسیس شرکت",
+        "titleEn": "Founded",
+        "descFa": "بنیان‌گذاری توسط برادران شاکری",
+        "descEn": "Established by the Shakeri brothers"
+      },
+      {
+        "year": "1386 / 2007",
+        "titleFa": "اولین دو صفحه‌ای",
+        "titleEn": "First two-platen",
+        "descFa": "اولین دستگاه دو صفحه‌ای ایران",
+        "descEn": "Iran's first two-platen machine"
+      },
+      {
+        "year": "1395 / 2016",
+        "titleFa": "ورود به سری PET",
+        "titleEn": "PET series launch",
+        "descFa": "دستگاه‌های تخصصی پریفرم PET",
+        "descEn": "Specialized PET preform machines"
+      },
+      {
+        "year": "1400 / 2021",
+        "titleFa": "گواهینامه ISO",
+        "titleEn": "ISO certification",
+        "descFa": "ISO 9001 — کنترل کیفیت",
+        "descEn": "ISO 9001 — quality control"
+      },
+      {
+        "year": "1404 / 2025",
+        "titleFa": "گسترش بین‌المللی",
+        "titleEn": "International expansion",
+        "descFa": "صادرات به ۵ کشور غرب آسیا",
+        "descEn": "Exports to 5 West Asian countries"
+      }
+    ],
+    "team": [
+      {
+        "id": "t1",
+        "nameFa": "محمدرضا شاکری",
+        "nameEn": "Mohammad Reza Shakeri",
+        "roleFa": "مدیرعامل و بنیان‌گذار",
+        "roleEn": "CEO & Co-founder",
+        "bioFa": "فارغ‌التحصیل مهندسی مکانیک طراحی جامدات",
+        "bioEn": "Mechanical Engineer — Solid Design"
+      },
+      {
+        "id": "t2",
+        "nameFa": "امیر شاکری",
+        "nameEn": "Amir Shakeri",
+        "roleFa": "مدیر تولید و عضو هیئت مدیره",
+        "roleEn": "Production Director & Board Member",
+        "bioFa": "فارغ‌التحصیل مهندسی مکانیک طراحی جامدات",
+        "bioEn": "Mechanical Engineer — Solid Design"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "ISO 9001",
+        "descFa": "گواهینامه سیستم مدیریت کیفیت",
+        "descEn": "Quality Management System"
+      },
+      {
+        "name": "دانش‌بنیان",
+        "descFa": "تأییدیه شرکت دانش‌بنیان",
+        "descEn": "Knowledge-Based Company certification"
+      },
+      {
+        "name": "CE Standards",
+        "descFa": "استانداردهای ایمنی اروپا",
+        "descEn": "European safety standards"
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "two-platen",
+      "nameFa": "سری دو صفحه‌ای",
+      "nameEn": "Two-Platen Series",
+      "tagline": "PA · 2P",
+      "shortFa": "به‌روزترین تکنولوژی گیره دنیا — برای قطعات بلند، پیچیده و سنگین.",
+      "shortEn": "The most advanced clamping technology — for long, complex, heavy parts.",
+      "featured": true,
+      "tonnageFa": "۵۰۰ تا ۱۳۰۰ تن",
+      "tonnageEn": "500–1300 ton",
+      "image": "130012300.jpg",
+      "specs": [
+        {
+          "labelFa": "نیروی گیره",
+          "labelEn": "Clamp force",
+          "valueFa": "۵۰۰ تا ۱۳۰۰ تن",
+          "valueEn": "500–1300 ton"
+        },
+        {
+          "labelFa": "وزن تزریق",
+          "labelEn": "Shot weight",
+          "valueFa": "تا ۱۶,۰۰۰ گرم",
+          "valueEn": "up to 16,000g"
+        },
+        {
+          "labelFa": "کنترل",
+          "labelEn": "Control",
+          "valueFa": "Techmation LCD 12\"",
+          "valueEn": "Techmation 12\" LCD"
+        },
+        {
+          "labelFa": "موتور",
+          "labelEn": "Drive",
+          "valueFa": "سروموتور",
+          "valueEn": "Servo"
+        }
+      ],
+      "descriptionFa": "<p>پارسیان تنها سازنده دستگاه تزریق پلاستیک دو صفحه‌ای در ایران است. این تکنولوژی به‌روزترین در دنیا شناخته می‌شود — مزایای آن شامل راندمان تولید بالاتر، اشغال فضای کمتر، کورس گیره بیشتر، مصرف انرژی کمتر و نیروی گیره قدرتمندتر است.</p>",
+      "descriptionEn": "<p>Parsian is Iran's only manufacturer of two-platen injection molding machines. This technology is recognized as the most advanced clamping system worldwide — higher throughput, smaller floor footprint, longer mold-opening stroke, lower energy consumption, and stronger clamp force.</p>",
+      "models": [
+        {
+          "code": "PA-500/2800",
+          "tonFa": "۵۰۰ تن",
+          "tonEn": "500 ton",
+          "shotFa": "۲۸۰۰ گرم",
+          "shotEn": "2800g",
+          "image": "5002800.jpg"
+        },
+        {
+          "code": "PA-800/5600",
+          "tonFa": "۸۰۰ تن",
+          "tonEn": "800 ton",
+          "shotFa": "۵۶۰۰ گرم",
+          "shotEn": "5600g",
+          "image": "8005600.jpg"
+        },
+        {
+          "code": "PA-1300/12300",
+          "tonFa": "۱۳۰۰ تن",
+          "tonEn": "1300 ton",
+          "shotFa": "۱۲۳۰۰ گرم",
+          "shotEn": "12300g",
+          "image": "130012300.jpg"
+        }
+      ]
+    },
+    {
+      "id": "standard",
+      "nameFa": "سری استاندارد",
+      "nameEn": "Standard Series",
+      "tagline": "PA · Standard",
+      "shortFa": "سروموتور، کنترل Techmation، راندمان بالا — انتخاب اصلی برای تولید روزانه.",
+      "shortEn": "Servo, Techmation control, high efficiency — the workhorse for daily production.",
+      "tonnageFa": "۱۰۰ تا ۱۳۰۰ تن",
+      "tonnageEn": "100–1300 ton",
+      "image": "5002800.jpg",
+      "specs": [
+        {
+          "labelFa": "نیروی گیره",
+          "labelEn": "Clamp force",
+          "valueFa": "۱۰۰ تا ۱۳۰۰ تن",
+          "valueEn": "100–1300 ton"
+        },
+        {
+          "labelFa": "موتور",
+          "labelEn": "Drive",
+          "valueFa": "سروموتور",
+          "valueEn": "Servo"
+        },
+        {
+          "labelFa": "صرفه‌جویی",
+          "labelEn": "Energy saving",
+          "valueFa": "۲۰ تا ۸۰٪",
+          "valueEn": "20–80%"
+        },
+        {
+          "labelFa": "کنترل",
+          "labelEn": "Control",
+          "valueFa": "Techmation LCD 12\"",
+          "valueEn": "Techmation 12\" LCD"
+        }
+      ],
+      "descriptionFa": "<p>سری استاندارد PA با پمپ دبی ثابت و سیستم سروموتور — راندمان بالاتر، استهلاک پایین‌تر و کاهش مصرف برق تا ۸۰٪. هفت تناژ مختلف برای پوشش هر نوع تولید.</p>",
+      "descriptionEn": "<p>The PA Standard series — fixed-flow pump with servo drive. Higher efficiency, lower wear, and up to 80% energy savings. Seven tonnage options covering every production scenario.</p>",
+      "models": [
+        {
+          "code": "PA-100/250",
+          "tonFa": "۱۰۰ تن",
+          "tonEn": "100 ton",
+          "shotFa": "۲۵۰ گرم",
+          "shotEn": "250g",
+          "image": "100250.jpg"
+        },
+        {
+          "code": "PA-220/620",
+          "tonFa": "۲۲۰ تن",
+          "tonEn": "220 ton",
+          "shotFa": "۶۲۰ گرم",
+          "shotEn": "620g",
+          "image": "200620.jpg"
+        },
+        {
+          "code": "PA-320/1100",
+          "tonFa": "۳۲۰ تن",
+          "tonEn": "320 ton",
+          "shotFa": "۱۱۰۰ گرم",
+          "shotEn": "1100g",
+          "image": "3001100.jpg"
+        },
+        {
+          "code": "PA-500/2800",
+          "tonFa": "۵۰۰ تن",
+          "tonEn": "500 ton",
+          "shotFa": "۲۸۰۰ گرم",
+          "shotEn": "2800g",
+          "image": "5002800.jpg"
+        },
+        {
+          "code": "PA-800/3200",
+          "tonFa": "۸۰۰ تن",
+          "tonEn": "800 ton",
+          "shotFa": "۳۲۰۰ گرم",
+          "shotEn": "3200g",
+          "image": "8005600.jpg"
+        }
+      ]
+    },
+    {
+      "id": "high-speed",
+      "nameFa": "سری سرعت بالا",
+      "nameEn": "High-Speed Series",
+      "tagline": "PA · High Speed",
+      "shortFa": "۲۰۰ میلی‌متر بر ثانیه — ظروف IML، سیکل ۶ ثانیه، تولید انبوه.",
+      "shortEn": "200 mm/s — IML containers, 6-second cycle, high-volume production.",
+      "tonnageFa": "۱۰۰ تا ۳۲۰ تن",
+      "tonnageEn": "100–320 ton",
+      "image": "3001100.jpg",
+      "specs": [
+        {
+          "labelFa": "سرعت تزریق",
+          "labelEn": "Injection speed",
+          "valueFa": "۲۰۰ میلی‌متر/ثانیه",
+          "valueEn": "200 mm/s"
+        },
+        {
+          "labelFa": "گردش مارپیچ",
+          "labelEn": "Screw rotation",
+          "valueFa": "۳۰۰ دور/دقیقه",
+          "valueEn": "300 rpm"
+        },
+        {
+          "labelFa": "فشار تزریق",
+          "labelEn": "Injection pressure",
+          "valueFa": "۱۸۰۰–۲۲۰۰ بار",
+          "valueEn": "1800–2200 bar"
+        },
+        {
+          "labelFa": "سیکل",
+          "labelEn": "Cycle time",
+          "valueFa": "از ۶ ثانیه",
+          "valueEn": "from 6 sec"
+        }
+      ],
+      "descriptionFa": "<p>دستگاه‌های High Speed پارسیان با سرعت تزریق ۱۷۰ تا ۲۵۰ میلی‌متر بر ثانیه — طراحی شده برای تولید ظروف IML و نصب روبوت با سیکل زمانی ۶ ثانیه.</p>",
+      "descriptionEn": "<p>Parsian High-Speed machines deliver 170–250 mm/s injection speed — engineered for IML container production and 6-second robot-integrated cycles.</p>",
+      "models": [
+        {
+          "code": "PA-HS 100/250",
+          "tonFa": "۱۰۰ تن",
+          "tonEn": "100 ton",
+          "shotFa": "۲۵۰ گرم",
+          "shotEn": "250g",
+          "image": "100250.jpg"
+        },
+        {
+          "code": "PA-HS 220/620",
+          "tonFa": "۲۲۰ تن",
+          "tonEn": "220 ton",
+          "shotFa": "۶۲۰ گرم",
+          "shotEn": "620g",
+          "image": "200620.jpg"
+        },
+        {
+          "code": "PA-HS 320/1100",
+          "tonFa": "۳۲۰ تن",
+          "tonEn": "320 ton",
+          "shotFa": "۱۱۰۰ گرم",
+          "shotEn": "1100g",
+          "image": "3001100.jpg"
+        }
+      ]
+    },
+    {
+      "id": "upvc",
+      "nameFa": "سری UPVC",
+      "nameEn": "UPVC Series",
+      "tagline": "PA · UPVC",
+      "shortFa": "سیلندر و مارپیچ مقاوم به سایش — مخصوص اتصالات UPVC.",
+      "shortEn": "Abrasion-resistant cylinder & screw — purpose-built for UPVC fittings.",
+      "tonnageFa": "۲۲۰ تا ۳۲۰ تن",
+      "tonnageEn": "220–320 ton",
+      "image": "3001100.jpg",
+      "specs": [
+        {
+          "labelFa": "وزن تزریق",
+          "labelEn": "Shot weight",
+          "valueFa": "تا ۲۵۰۰ گرم",
+          "valueEn": "up to 2500g"
+        },
+        {
+          "labelFa": "سیلندر",
+          "labelEn": "Cylinder",
+          "valueFa": "مقاوم به سایش",
+          "valueEn": "Wear-resistant"
+        },
+        {
+          "labelFa": "هیدروموتور",
+          "labelEn": "Hydraulic motor",
+          "valueFa": "گشتاور بالا",
+          "valueEn": "High-torque"
+        },
+        {
+          "labelFa": "موتور",
+          "labelEn": "Drive",
+          "valueFa": "سروموتور",
+          "valueEn": "Servo"
+        }
+      ],
+      "descriptionFa": "<p>سری UPVC پارسیان با طراحی منحصربه‌فرد و سال‌ها تجربه، سهم بزرگی از بازار تولید اتصالات UPVC در ایران را به خود اختصاص داده است.</p>",
+      "descriptionEn": "<p>The Parsian UPVC series has earned a leading position in Iran's UPVC fittings market through years of refinement.</p>",
+      "models": [
+        {
+          "code": "PA-UPVC 220/620",
+          "tonFa": "۲۲۰ تن",
+          "tonEn": "220 ton",
+          "shotFa": "۵۰۰ گرم",
+          "shotEn": "500g",
+          "image": "200620.jpg"
+        },
+        {
+          "code": "PA-UPVC 220/1100",
+          "tonFa": "۲۲۰ تن",
+          "tonEn": "220 ton",
+          "shotFa": "۷۵۰ گرم",
+          "shotEn": "750g",
+          "image": "200620.jpg"
+        },
+        {
+          "code": "PA-UPVC 320/1100",
+          "tonFa": "۳۲۰ تن",
+          "tonEn": "320 ton",
+          "shotFa": "۱۱۰۰ گرم",
+          "shotEn": "1100g",
+          "image": "3001100.jpg"
+        },
+        {
+          "code": "PA-UPVC 320/2800",
+          "tonFa": "۳۲۰ تن",
+          "tonEn": "320 ton",
+          "shotFa": "۲۵۰۰ گرم",
+          "shotEn": "2500g",
+          "image": "3001100.jpg"
+        }
+      ]
+    },
+    {
+      "id": "pet",
+      "nameFa": "سری PET — پریفرم",
+      "nameEn": "PET Preform Series",
+      "tagline": "PA · PET",
+      "shortFa": "L/D ۲۴-۲۶ — پریفرم با کیفیت بالا، سریع و کم‌مصرف.",
+      "shortEn": "L/D 24-26 — high-quality preforms, fast and efficient.",
+      "tonnageFa": "۱۰۰ تا ۵۰۰ تن",
+      "tonnageEn": "100–500 ton",
+      "image": "200620.jpg",
+      "specs": [
+        {
+          "labelFa": "L/D",
+          "labelEn": "L/D ratio",
+          "valueFa": "۲۴ تا ۲۶",
+          "valueEn": "24–26"
+        },
+        {
+          "labelFa": "واحد تزریق",
+          "labelEn": "Injection unit",
+          "valueFa": "تقویت‌شده",
+          "valueEn": "Reinforced"
+        },
+        {
+          "labelFa": "موتور",
+          "labelEn": "Drive",
+          "valueFa": "سروموتور",
+          "valueEn": "Servo"
+        },
+        {
+          "labelFa": "صرفه‌جویی",
+          "labelEn": "Energy saving",
+          "valueFa": "تا ۸۰٪",
+          "valueEn": "up to 80%"
+        }
+      ],
+      "descriptionFa": "<p>تمامی مدل‌های دستگاه استاندارد پارسیان در سری PET برای تولید پریفرم با کیفیت بالاتر و سرعت بیشتر قابل ارائه‌اند.</p>",
+      "descriptionEn": "<p>The PET preform series is available across the entire PA range — engineered for higher-quality preforms in less cycle time.</p>",
+      "models": [
+        {
+          "code": "PA-PET 100/250",
+          "tonFa": "۱۰۰ تن",
+          "tonEn": "100 ton",
+          "shotFa": "۲۵۰ گرم",
+          "shotEn": "250g",
+          "image": "100250.jpg"
+        },
+        {
+          "code": "PA-PET 220/620",
+          "tonFa": "۲۲۰ تن",
+          "tonEn": "220 ton",
+          "shotFa": "۶۲۰ گرم",
+          "shotEn": "620g",
+          "image": "200620.jpg"
+        },
+        {
+          "code": "PA-PET 320/1100",
+          "tonFa": "۳۲۰ تن",
+          "tonEn": "320 ton",
+          "shotFa": "۱۱۰۰ گرم",
+          "shotEn": "1100g",
+          "image": "3001100.jpg"
+        },
+        {
+          "code": "PA-PET 500/2800",
+          "tonFa": "۵۰۰ تن",
+          "tonEn": "500 ton",
+          "shotFa": "۲۸۰۰ گرم",
+          "shotEn": "2800g",
+          "image": "5002800.jpg"
+        }
+      ]
+    }
+  ],
+
+  "auxiliary": [
+    {
+      "id": "esd-charger",
+      "brand": "KIAN",
+      "tagFa": "ولتاژ بالا · IML",
+      "tagEn": "High Voltage · IML",
+      "nameFa": "شارژر الکترواستاتیک",
+      "nameEn": "Electrostatic Charger",
+      "modelLine": "IML Label Charging System",
+      "image": "kian-electrostatic-charger.jpg",
+      "imageBg": "#000000",
+      "shortFa": "تا ۲۰ کیلوولت با کنترل PWM، طراحی‌شده برای ربات‌های IML — جایگزین مستقیم Bonato و Pulse.",
+      "shortEn": "Up to 20 kV with PWM control, built for IML robots — a drop-in replacement for Bonato and Pulse.",
+      "summaryFa": "<p>طراحی‌شده برای ربات‌های IML (In-Mold Labeling) و کاربردهای الکترواستاتیک صنعتی. خروجی HV دوکانال با کنترل از راه دور PWM و یکپارچگی کامل با PLC از طریق کانکتور فرمان ۶ پین. جایگزین مستقیم سیستم‌های Bonato، Pulse و مشابه.</p>",
+      "summaryEn": "<p>Designed for In-Mold Labeling (IML) robots and industrial electrostatic applications. Dual-channel HV output with PWM remote control and full PLC integration via a 6-pin command connector. A drop-in replacement for Bonato, Pulse and similar systems.</p>",
+      "warrantyFa": "گارانتی ۱۲ ماه",
+      "warrantyEn": "12-month warranty",
+      "stats": [
+        { "value": "20 kV",  "labelFa": "حداکثر ولتاژ",   "labelEn": "Max output" },
+        { "value": "1.5 mA", "labelFa": "حداکثر جریان",   "labelEn": "Max current" },
+        { "value": "24 V",   "labelFa": "تغذیه ورودی",    "labelEn": "Supply" },
+        { "value": "HV±",    "labelFa": "خروجی دوکانال",  "labelEn": "Dual channel" }
+      ],
+      "features": [
+        { "fa": "حالت دستی",                  "en": "Manual Mode" },
+        { "fa": "حالت PLC با PWM",             "en": "PLC Mode (PWM)" },
+        { "fa": "حفاظت اضافه جریان",          "en": "Overcurrent protection" },
+        { "fa": "جایگزین Bonato / Pulse",      "en": "Drop-in for Bonato / Pulse" }
+      ],
+      "specs": [
+        { "labelFa": "ولتاژ خروجی",        "labelEn": "Output voltage",    "value": "0 – 20 kV (adjustable)" },
+        { "labelFa": "جریان خروجی",        "labelEn": "Output current",    "value": "0 – 1.5 mA (adjustable)" },
+        { "labelFa": "سیگنال Enable",      "labelEn": "Enable signal",     "value": "24 VDC — Pins 3 & 4" },
+        { "labelFa": "ورودی PWM",           "labelEn": "PWM input",         "value": "24 VDC, ≥ 20% duty" },
+        { "labelFa": "کانکتور فرمان",       "labelEn": "Command connector", "valueFa": "ترمینال ۶ پین", "valueEn": "6-pin terminal block" },
+        { "labelFa": "شیلدینگ کابل",        "labelEn": "Cable shielding",   "value": "PG11 Gland (required)" },
+        { "labelFa": "نشانگرها",             "labelEn": "Indicators",        "value": "Green Enable · Red Fault" }
+      ],
+      "pdfUrl": "KIAN_Brochure_v9.pdf"
+    },
+
+    {
+      "id": "linear-sensors",
+      "brand": "KIAN",
+      "tagFa": "پتانسیومتری · DIN 43650",
+      "tagEn": "Potentiometric · DIN 43650",
+      "nameFa": "سنسور موقعیت خطی",
+      "nameEn": "Linear Position Transducer",
+      "modelLine": "10 lengths · 100 – 750 mm · 5 kΩ / 10 kΩ",
+      "image": "kian-linear-sensor.jpg",
+      "imageBg": "#000000",
+      "shortFa": "سنسور موقعیت خطی پتانسیومتری، ۱۰ طول استاندارد، دقت ۰.۰۱ میلی‌متر و رزولوشن نامحدود.",
+      "shortEn": "Potentiometric linear position transducer, 10 standard lengths, 0.01 mm repeatability and infinite resolution.",
+      "summaryFa": "<p>سنسور موقعیت خطی نوع پتانسیومتری با خطی‌بودگی ±۰.۵٪ و دقت تکرارپذیری ۰.۰۱ میلی‌متر. مناسب نصب روی ماشین‌های تزریق پلاستیک، پرس‌های افقی و عمودی، و کاربردهای صنعتی دیگر. درجه حفاظت IP54 (تا IP64 سفارشی).</p>",
+      "summaryEn": "<p>A potentiometric linear position transducer with ±0.5% independent linearity and 0.01 mm repeatability. Ideal for plastic injection machines, vertical and horizontal presses, and other industrial applications. IP54 standard (IP64 on request).</p>",
+      "stats": [
+        { "value": "±0.05%", "labelFa": "بهترین دقت",    "labelEn": "Best std. dev." },
+        { "value": "0.01 mm","labelFa": "تکرارپذیری",    "labelEn": "Repeatability" },
+        { "value": "10 m/s", "labelFa": "سرعت حداکثر",  "labelEn": "Max speed" },
+        { "value": "IP54",   "labelFa": "حفاظت (تا IP64)","labelEn": "Up to IP64" }
+      ],
+      "features": [
+        { "fa": "۱۰ طول استاندارد",        "en": "10 standard lengths" },
+        { "fa": "عمر بسیار بالا",          "en": "Very long life" },
+        { "fa": "رزولوشن نامحدود",         "en": "Infinite resolution" },
+        { "fa": "کانکتور هیدرولیک DIN",    "en": "DIN 43650 connector" }
+      ],
+      "specs": [
+        { "labelFa": "طول‌های اسمی",         "labelEn": "Nominal lengths",         "value": "100 / 150 / 200 / 300 / 350 / 400 / 450 / 550 / 650 / 750 mm" },
+        { "labelFa": "مقاومت",               "labelEn": "Resistance",               "value": "5 kΩ (≤450 mm) · 10 kΩ (≥550 mm)" },
+        { "labelFa": "خطی‌بودگی مستقل",      "labelEn": "Independent linearity",   "value": "± 0.5%" },
+        { "labelFa": "انحراف معیار",         "labelEn": "Standard deviation",       "value": "0.05% (≥200 mm), 0.1–0.2% smaller" },
+        { "labelFa": "ولتاژ کاری",           "labelEn": "Working voltage",          "value": "24 VDC (max 36 VDC)" },
+        { "labelFa": "دمای کار",             "labelEn": "Operating temperature",    "value": "-20 ... +80 °C" },
+        { "labelFa": "جنس بدنه",             "labelEn": "Housing material",         "valueFa": "آلومینیوم آنودایز شده", "valueEn": "Anodised aluminium" },
+        { "labelFa": "اتصال الکتریکی",       "labelEn": "Electrical connection",    "value": "DIN 43650 (hydraulic connector)" }
+      ],
+      "pdfUrl": "Kian Datasheet V1.0 (EN).pdf"
+    },
+
+    {
+      "id": "servo-motors",
+      "brand": "Parsian",
+      "tagFa": "سرو موتور",
+      "tagEn": "Servo",
+      "nameFa": "سیستم سرو موتور",
+      "nameEn": "Servo Motor Systems",
+      "shortFa": "کاهش مصرف برق تا ۸۰٪ — قابل نصب روی دستگاه‌های جدید یا ارتقای دستگاه‌های قدیمی.",
+      "shortEn": "Up to 80% energy savings — factory-fitted on new machines or as a retrofit kit.",
+      "summaryFa": "<p>سیستم‌های سرو موتور پارسیان برای کاهش مصرف برق تا ۸۰٪ در دستگاه‌های تزریق پلاستیک طراحی شده‌اند. این سیستم‌ها می‌توانند هم روی دستگاه‌های جدید پارسیان نصب شوند و هم به‌عنوان کیت ارتقا برای دستگاه‌های قدیمی استفاده شوند.</p><p>برای دریافت مشخصات فنی دقیق و قیمت، با کارشناسان فنی ما در تماس باشید.</p>",
+      "summaryEn": "<p>Parsian servo motor systems are engineered to reduce power consumption by up to 80% on plastic injection machines. They are available factory-fitted on new Parsian machines, or as a retrofit kit for older machines.</p><p>For detailed specifications and pricing, please contact our technical team.</p>"
+    },
+
+    {
+      "id": "servo-drivers",
+      "brand": "Parsian",
+      "tagFa": "درایور",
+      "tagEn": "Driver",
+      "nameFa": "درایور سرو",
+      "nameEn": "Servo Drivers",
+      "shortFa": "کنترل دقیق گشتاور و سرعت با رابط فارسی و ابزار راه‌اندازی ساده.",
+      "shortEn": "Precision torque and speed control with Persian UI and a simple commissioning tool.",
+      "summaryFa": "<p>درایورهای سرو پارسیان با کنترل دقیق گشتاور و سرعت — همراه با رابط فارسی، نمایشگر روشن و ابزار راه‌اندازی ساده. برای استفاده در سیستم‌های مختلف تزریق پلاستیک و کاربردهای صنعتی.</p><p>برای دریافت مشخصات فنی دقیق با کارشناسان فنی ما در تماس باشید.</p>",
+      "summaryEn": "<p>Parsian servo drivers with precision torque and speed control — featuring a Persian UI, clear display, and a simple commissioning tool. Suitable for various plastic-injection systems and industrial applications.</p><p>For detailed specifications, please contact our technical team.</p>"
+    },
+
+    {
+      "id": "hydraulic-valves",
+      "brand": "Parsian",
+      "tagFa": "هیدرولیک",
+      "tagEn": "Hydraulic",
+      "nameFa": "شیر هیدرولیک",
+      "nameEn": "Hydraulic Valves",
+      "shortFa": "انواع شیرهای کنترل جریان، فشار و جهت — اصل و قابل اعتماد.",
+      "shortEn": "Flow, pressure and directional control valves — genuine and reliable.",
+      "summaryFa": "<p>مجموعه‌ای کامل از شیرهای هیدرولیک کنترل جریان، فشار و جهت — اصل و قابل اعتماد برای کاربردهای صنعتی. تامین قطعات یدکی و فروش به سایر صنایع.</p><p>برای استعلام موجودی و قیمت با ما در تماس باشید.</p>",
+      "summaryEn": "<p>A full range of flow-, pressure- and directional-control hydraulic valves — genuine and reliable for industrial applications. Available as spare parts or for sale to other industries.</p><p>Contact us for stock availability and pricing.</p>"
+    }
+  ],
+
+  "services": [
+    {
+      "id": "installation",
+      "iconKey": "settings",
+      "titleFa": "نصب و راه‌اندازی",
+      "titleEn": "Installation & Setup",
+      "descFa": "کارشناسان ما دستگاه را در محل شما نصب، تنظیم و راه‌اندازی می‌کنند.",
+      "descEn": "Our specialists install and commission the machine on your floor."
+    },
+    {
+      "id": "maintenance",
+      "iconKey": "wrench",
+      "titleFa": "سرویس و نگهداری",
+      "titleEn": "Service & Maintenance",
+      "descFa": "برنامه‌های نگهداری اختصاصی برای حداکثر زمان کارکرد.",
+      "descEn": "Custom PM plans designed to maximize uptime."
+    },
+    {
+      "id": "training",
+      "iconKey": "book",
+      "titleFa": "آموزش اپراتور",
+      "titleEn": "Operator Training",
+      "descFa": "از کارکرد پایه تا بهینه‌سازی پیشرفته سیکل — در محل شما یا در کارخانه.",
+      "descEn": "From basic operation to advanced cycle optimization — on-site or at our facility."
+    },
+    {
+      "id": "upgrade",
+      "iconKey": "trending",
+      "titleFa": "ارتقا دستگاه قدیمی",
+      "titleEn": "Retrofit & Upgrade",
+      "descFa": "دستگاه قدیمی خود را با کمترین هزینه ارتقا دهید.",
+      "descEn": "Retrofit your existing machine with modern controls."
+    },
+    {
+      "id": "parts",
+      "iconKey": "package",
+      "titleFa": "قطعات یدکی اصل",
+      "titleEn": "Genuine Spare Parts",
+      "descFa": "موجودی کامل قطعات یدکی اصل — ارسال سریع به سراسر کشور.",
+      "descEn": "Full inventory of OEM spare parts — fast nationwide dispatch."
+    },
+    {
+      "id": "support",
+      "iconKey": "phone",
+      "titleFa": "پشتیبانی ۲۴ ساعته",
+      "titleEn": "24/7 Technical Support",
+      "descFa": "تیم پشتیبانی فنی ۲۴ ساعته — تماس، ایمیل، خدمات در محل.",
+      "descEn": "Round-the-clock technical support — phone, email, on-site."
+    }
+  ],
+  "news": [
+    {
+      "id": "n-1779883545639",
+      "date": "2026-05-27",
+      "dateFa": "30 اردیبهشت 1405",
+      "category": "press",
+      "categoryFa": "رسانه",
+      "categoryEn": "Press",
+      "titleFa": "سینا شاکری، لقب بهترین مدیر دنیا را گرفت",
+      "titleEn": "Sina, the Best",
+      "excerptFa": "سینا شاکری با تکنیک های مخوف خود لقب بهترین مدیر تحول سازمانی را گرفت",
+      "excerptEn": "sina, best of the best\nbest of the best",
+      "contentFa": "سینا شاکری با تکنیک های مخوف خود&nbsp;<div>لقب بهترین مدیر تحول سازمانی را گرفت</div><div><u>سینا</u></div><div><i>سیییییناااا&nbsp;</i></div><div><b>سییییییییییییناااااااااااااا</b></div>",
+      "contentEn": "<div style=\"text-align: left;\">sina, best of the best\nbest of the best</div><div style=\"text-align: left;\">&nbsp;sina</div><div style=\"text-align: left;\">sina</div>",
+      "image": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": "n-2026-05-18",
+      "date": "2026-05-18",
+      "dateFa": "۲۸ اردیبهشت ۱۴۰۵",
+      "category": "technology",
+      "categoryFa": "فناوری",
+      "categoryEn": "Technology",
+      "titleFa": "معرفی نسل جدید کنترل پارسیان — iControl",
+      "titleEn": "Introducing iControl — Parsian's next-gen HMI",
+      "excerptFa": "صفحه ۱۵ اینچ لمسی، بهینه‌سازی هوشمند سیکل و رابط فارسی کامل — اولین کنترل کاملاً ایرانی برای دستگاه تزریق.",
+      "excerptEn": "15\" touchscreen, AI-assisted cycle optimization, full Persian and English UI — Iran's first homegrown injection-molding HMI.",
+      "contentFa": "<p>پارسیان با افتخار از نسل جدید کنترل خود — iControl — رونمایی می‌کند.</p>"
+    },
+    {
+      "id": "n-2026-05-10",
+      "date": "2026-05-10",
+      "dateFa": "۲۰ اردیبهشت ۱۴۰۵",
+      "category": "sustainability",
+      "categoryFa": "پایداری",
+      "categoryEn": "Sustainability",
+      "titleFa": "صرفه‌جویی ۱.۲ گیگاوات‌ساعت برق در صنعت پلاستیک",
+      "titleEn": "1.2 GWh saved across customer fleet in 2025",
+      "excerptFa": "دستگاه‌های نسل جدید پارسیان با سروموتور تا ۸۰٪ کاهش مصرف برق ایجاد کرده‌اند.",
+      "excerptEn": "Servo-powered Parsian machines cut customer energy use by up to 80%.",
+      "contentFa": "<p>گزارش سال ۱۴۰۴ پارسیان نشان می‌دهد دستگاه‌های نسل جدید سروموتور این شرکت در مجموع ۱.۲ گیگاوات‌ساعت برق صرفه‌جویی کرده‌اند.</p>"
+    },
+    {
+      "id": "n-2026-05-22",
+      "date": "2026-05-22",
+      "dateFa": "۱ خرداد ۱۴۰۵",
+      "category": "event",
+      "categoryFa": "رویداد",
+      "categoryEn": "Event",
+      "titleFa": "حضور پارسیان در نمایشگاه ایران پلاست ۱۴۰۵",
+      "titleEn": "Parsian at Iran Plast 2026, Tehran",
+      "excerptFa": "سالن A، غرفه ۲۰۴ — رونمایی از سری جدید PA Compact و دستگاه‌های دو صفحه‌ای ۸۰۰ تن.",
+      "excerptEn": "Hall A, Booth 204 — premiering the new PA Compact series and our 800-ton two-platen machine.",
+      "contentFa": "<p>شرکت پارسیان در نوزدهمین نمایشگاه بین‌المللی صنعت پلاستیک ایران حضور خواهد داشت.</p>"
+    }
+  ],
+
+  "customers": [
+    { "name": "Customer 1",  "logo": "customer-1.png",  "url": "#" },
+    { "name": "Customer 2",  "logo": "customer-2.png",  "url": "#" },
+    { "name": "Customer 3",  "logo": "customer-3.png",  "url": "#" },
+    { "name": "Customer 4",  "logo": "customer-4.png",  "url": "#" },
+    { "name": "Customer 5",  "logo": "customer-5.png",  "url": "#" },
+    { "name": "Customer 6",  "logo": "customer-6.png",  "url": "#" },
+    { "name": "Customer 7",  "logo": "customer-7.png",  "url": "#" },
+    { "name": "Customer 8",  "logo": "customer-8.png",  "url": "#" },
+    { "name": "Customer 9",  "logo": "customer-9.png",  "url": "#" },
+    { "name": "Customer 10", "logo": "customer-10.png", "url": "#" },
+    { "name": "Customer 11", "logo": "customer-11.png", "url": "#" },
+    { "name": "Customer 12", "logo": "customer-12.png", "url": "#" }
+  ],
+
+  "gallery": [
+    {
+      "id": "g1",
+      "captionFa": "خط تولید دستگاه دو صفحه‌ای ۱۳۰۰ تن",
+      "captionEn": "1300-ton two-platen production line",
+      "category": "production"
+    },
+    {
+      "id": "g2",
+      "captionFa": "سالن مونتاژ نهایی",
+      "captionEn": "Final assembly hall",
+      "category": "production"
+    },
+    {
+      "id": "g3",
+      "captionFa": "تست عملکرد PA-500/2800",
+      "captionEn": "PA-500/2800 functional test",
+      "category": "testing"
+    },
+    {
+      "id": "g4",
+      "captionFa": "غرفه پارسیان در ایران پلاست ۱۴۰۴",
+      "captionEn": "Parsian booth at Iran Plast 2025",
+      "category": "events"
+    },
+    {
+      "id": "g5",
+      "captionFa": "مصاحبه با شبکه ایران کالا",
+      "captionEn": "Interview with Iran-Kala TV",
+      "category": "media"
+    },
+    {
+      "id": "g6",
+      "captionFa": "تیم خدمات در محل مشتری",
+      "captionEn": "Service team on-site",
+      "category": "service"
+    }
+  ]
+}
