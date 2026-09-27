@@ -31,11 +31,12 @@ window.renderPage = function () {
       const holdMs = Math.max(2, Number(H.machineSeconds) || 4) * 1000;
       hero.innerHTML = `
         ${vid ? `<video class="hero-video" autoplay muted loop playsinline preload="auto"><source src="${vid}" type="video/mp4"></video>` : ''}
+        <canvas class="hero-grid" aria-hidden="true"></canvas>
         <div class="hero-stage">
           <div class="container hero-content">
             <span class="hero-eyebrow"><span class="live-dot"></span>${fa?H.eyebrowFa:H.eyebrowEn}</span>
             <h1 class="hero-wordmark">
-              <span class="hero-line bt" dir="${dirOf(w1)}" style="--bt-step:90ms">${blurText(w1,'letters')}</span>
+              <span class="hero-line hero-line-1 bt" dir="${dirOf(w1)}" style="--bt-step:90ms">${blurText(w1,'letters')}</span>
               <a class="hero-machine" href="${escAttr(machines[0].url || 'products.html')}" aria-label="${escAttr(machineAlt(machines[0], fa))}">
                 ${machines.map((m, i) => `
                 <picture class="hero-slide${i === 0 ? ' is-active' : ''}">
@@ -43,7 +44,7 @@ window.renderPage = function () {
                   <img src="${escAttr(m.image)}" alt="" decoding="async" fetchpriority="${i === 0 ? 'high' : 'low'}">
                 </picture>`).join('')}
               </a>
-              <span class="hero-line bt" dir="${dirOf(w2)}" style="--bt-step:90ms">${blurText(w2,'letters')}</span>
+              <span class="hero-line hero-line-2 bt" dir="${dirOf(w2)}" style="--bt-step:90ms">${blurText(w2,'letters')}</span>
             </h1>
           </div>
         </div>
@@ -66,6 +67,7 @@ window.renderPage = function () {
             </a>`).join('')}
         </div></div>`;
       startHeroRotator(hero.querySelector('.hero-machine'), machines, fa, holdMs);
+      if (window.KineticGrid) KineticGrid.mount(hero.querySelector('.hero-grid'), hero);
       const cue = hero.querySelector('.hero-scroll');
       if (cue) cue.addEventListener('click', () => {
         const next = hero.nextElementSibling;

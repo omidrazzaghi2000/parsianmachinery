@@ -31,39 +31,33 @@
     header.classList.toggle('is-scrolled', y > 24);
   }
 
-  /* ---------------- hero parallax ---------------- */
-  function updateHeroParallax() {
-    if (reduced) return;
+  /* ---------------- hero parallax ----------------
+     Layered depth on scroll (after Osmo's parallax header): progress runs
+     0 → 1 from the top of the page until the hero has scrolled away, and is
+     published as --hero-p / --hero-y for motion.css to spread across the
+     layers. It eases toward the scroll position every frame, so the layers
+     glide like a smooth-scrolled page without taking over native scrolling. */
+  var heroP = 0, heroRaf = 0, heroLast = 0;
+  function heroStep(now) {
+    heroRaf = 0;
     var hero = document.querySelector('.hero');
     if (!hero) return;
-    var rect = hero.getBoundingClientRect();
-    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
     var y = window.scrollY || window.pageYOffset;
-    var canvas = hero.querySelector('.hero-canvas, .hero-video');
-    var content = hero.querySelector('.hero-content');
-    if (canvas) canvas.style.transform = 'translateY(' + (y * 0.18) + 'px) scale(1.02)';
-    if (content) {
-      content.style.transform = 'translateY(' + (y * 0.10) + 'px)';
-      var fade = 1 - Math.min(1, y / (rect.height + hero.offsetTop + 200));
-      content.style.opacity = String(Math.max(0.15, fade));
-    }
+    var height = hero.offsetHeight;
+    var span = hero.getBoundingClientRect().top + y + height;
+    var target = span > 0 ? Math.min(1, Math.max(0, y / span)) : 0;
+    var dt = heroLast ? Math.min(64, now - heroLast) : 16;
+    heroLast = now;
+    heroP += (target - heroP) * (1 - Math.exp(-dt / 90));
+    if (Math.abs(target - heroP) < 0.0004) heroP = target;
+    hero.style.setProperty('--hero-p', heroP.toFixed(4));
+    hero.style.setProperty('--hero-y', (heroP * height).toFixed(1) + 'px');
+    if (heroP !== target) heroRaf = requestAnimationFrame(heroStep);
+    else heroLast = 0;
   }
-
-  /* pointer-driven parallax on the hero illustration, desktop only */
-  function bindHeroPointerParallax() {
-    if (reduced || !window.matchMedia('(pointer:fine)').matches) return;
-    var hero = document.querySelector('.hero');
-    var canvas = hero && hero.querySelector('.hero-canvas svg');
-    if (!hero || !canvas) return;
-    hero.addEventListener('mousemove', function (e) {
-      var rect = hero.getBoundingClientRect();
-      var px = (e.clientX - rect.left) / rect.width - 0.5;
-      var py = (e.clientY - rect.top) / rect.height - 0.5;
-      canvas.style.transform = 'translate(' + (px * -18) + 'px,' + (py * -14) + 'px)';
-    });
-    hero.addEventListener('mouseleave', function () {
-      canvas.style.transform = 'translate(0,0)';
-    });
+  function updateHeroParallax() {
+    if (reduced || heroRaf) return;
+    heroRaf = requestAnimationFrame(heroStep);
   }
 
   var rafPending = false;
@@ -175,7 +169,6 @@
     updateProgress();
     updateHeader();
     updateHeroParallax();
-    bindHeroPointerParallax();
   }
 
   if (document.readyState === 'loading') {

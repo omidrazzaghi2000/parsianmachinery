@@ -44,10 +44,21 @@ header.site.is-scrolled .brand-logo-img{ height:52px; transition:height .3s var(
 html[dir="rtl"] .reveal-left{ transform:translateX(-36px); }
 .reveal-left.is-visible{ opacity:1; transform:none; }
 
-/* ---- hero parallax layers ---- */
-.hero{ perspective:1px; }
-.hero-canvas, .hero-video{ will-change:transform; }
-.hero-content{ will-change:transform, opacity; }
+/* ---- hero scroll parallax (depth layers) ----
+   motion.js sets --hero-p (0 → 1 while the hero scrolls away) and --hero-y
+   (that progress in px of hero height). Deeper layers travel further down,
+   so they seem to scroll slower: the glow and kinetic grid drift far behind,
+   the first wordmark line sinks behind the machine, and the machine, second
+   line and copy move together as the near plane. Individual translate/scale
+   properties compose with the hover, rotator and entrance transforms. */
+.hero::before{ translate:0 calc(var(--hero-y, 0px) * .70); }
+.hero-grid, .hero-video{ translate:0 calc(var(--hero-y, 0px) * .55); }
+.hero-eyebrow, .hero-line-1{ translate:0 calc(var(--hero-y, 0px) * .40); }
+.hero-machine, .hero-line-2, .hero-foot, .hero-scroll{ translate:0 calc(var(--hero-y, 0px) * .12); }
+.hero-machine{ scale:calc(1 + var(--hero-p, 0) * .08); }
+.hero-eyebrow{ opacity:calc(1 - var(--hero-p, 0) * 3); }
+.hero-foot{ opacity:calc(1 - (var(--hero-p, 0) - .3) * 2.5); }
+.hero-scroll{ opacity:calc(1 - var(--hero-p, 0) * 8); }
 
 /* ---- number counters ---- */
 .st b, .spec-stats-row .st b{ font-variant-numeric:tabular-nums; }
@@ -62,7 +73,8 @@ html[dir="rtl"] .reveal-left{ transform:translateX(-36px); }
   .reveal, .reveal-fade, .reveal-scale, .reveal-left{
     opacity:1 !important; transform:none !important; transition:none !important;
   }
-  .hero-canvas, .hero-video, .hero-content{ transform:none !important; }
+  .hero::before, .hero-grid, .hero-video, .hero-eyebrow, .hero-line-1, .hero-line-2,
+  .hero-machine, .hero-foot, .hero-scroll{ translate:none !important; scale:none !important; }
   .scroll-progress{ display:none; }
   *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; }
 }
